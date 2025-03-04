@@ -24,7 +24,7 @@ public class ShiftingObjet : MonoBehaviour
     {
         // Play Effect/animation
         // Switch Objects
-        //enable enteraction. 
+        // Enable enteraction. 
 
 
     }

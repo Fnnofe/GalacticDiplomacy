@@ -18,7 +18,6 @@ Shader "Custom/StencillMask"
         {
         Blend Zero One
         Zwrite off
-
             Stencil
             {
                 //test 1 
