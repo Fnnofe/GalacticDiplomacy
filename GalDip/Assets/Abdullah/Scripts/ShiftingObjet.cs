@@ -8,23 +8,11 @@ public class ShiftingObjet : MonoBehaviour
     GameObject[] switchObjectsList;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void changeObject()
     {
         // Play Effect/animation
         // Switch Objects
-        //enable enteraction. 
 
 
     }
