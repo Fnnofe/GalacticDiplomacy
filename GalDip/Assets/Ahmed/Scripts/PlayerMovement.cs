@@ -17,10 +17,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDir, movement;
     float yRot = 0f;
     private CharacterController controller;
+    private InspectObject inspectObject;
     
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked; // this wont make the object rotate.
         cam = Camera.main;
         controller = GetComponent<CharacterController>();
         yRotPoint = transform.GetChild(2);
@@ -28,8 +29,17 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        MovePlayer();
-        PlayerTurning();
+        inspectObject = FindObjectOfType<InspectObject>();
+        if (inspectObject == null)
+        {
+            MovePlayer();
+            PlayerTurning();
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     void LateUpdate()
