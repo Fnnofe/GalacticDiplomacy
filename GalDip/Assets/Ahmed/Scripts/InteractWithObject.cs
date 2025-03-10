@@ -23,7 +23,7 @@ public class InteractWithObject : MonoBehaviour
     public GameObject GetFacingObject()
     {
         bool objHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out ray, 3f);
-        if (Input.GetKeyDown(KeyCode.E) && objHit)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && objHit)
         {
             return ray.collider.gameObject;
         }

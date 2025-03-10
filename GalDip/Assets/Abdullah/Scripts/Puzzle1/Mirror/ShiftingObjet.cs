@@ -12,6 +12,9 @@ public class ShiftingObjet : MonoBehaviour
     public GameObject[] ObjectsGroup;
     public int portalRotateAmount= 45;
     int countIndex = 0;
+    public int[] switchingSequance;
+    int currentSequnce;
+
 
     //Spin degree/array size or matieral size.
     //increase index or decrease.
@@ -23,18 +26,13 @@ public class ShiftingObjet : MonoBehaviour
     //Enter the mirror.  
     //switch objects.
     //
-    public void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            changeObject();
-        }
 
-    }
-    public void changeObject()
+    public void ChangeObject()
     {
 
         gameObject.transform.Rotate(0f, portalRotateAmount, 0f, Space.Self);
+
+
         if (ObjectsGroup != null)
         {
             countIndex += 1;
@@ -49,36 +47,64 @@ public class ShiftingObjet : MonoBehaviour
             }
             Debug.Log("countIndex: " + countIndex);
 
+
+
+
         }
+
+        //switching material for the mirror. (W.I.P) for later
+        if (switchingSequance != null)
+        {
+            //Switching sequance
+            currentSequnce += 1;
+            if (currentSequnce > switchingSequance.Length - 1)
+            {
+                currentSequnce = 0;
+
+            }
+            else if (countIndex < 0)
+            {
+                currentSequnce = switchingSequance.Length;
+            }
+
+            //switching material for the mirror.
+
+        }
+
     }
 
 
-        // Play Effect/animation
-        // Switch Objects
+    // Play Effect/animation
 
 
- 
+
 
     public void OnTriggerEnter(Collider other)
     {
+        //check if the playered crossed
         if (other.tag == "Player")
         {
-            Debug.Log("Switch objects");
             if (ObjectsGroup != null)
             {
+                //Process each group 
                 foreach (GameObject group in ObjectsGroup)
                 {
+                    //hide objects by changing the layer.
+                    //disable Collider.
                     if (group != ObjectsGroup[countIndex])
                     {
                       //  group.SetActive(false);
                       Transform[] objects = group.GetComponentsInChildren<Transform>();
                         foreach (Transform obj in objects)
                         {
-                            obj.gameObject.layer = 7;
+                            obj.gameObject.layer = (int)group.GetComponent<GroupInfo>().layer;
                             obj.gameObject.GetComponentInChildren<Collider>().enabled = false;
                         }
 
                     }
+
+                    //Manfist Objects by changing the layer
+                    //Enable Collider.
                     else
                     {
                         // group.SetActive(true);
