@@ -35,10 +35,12 @@ public class PlayerMovement : MonoBehaviour
             MovePlayer();
             PlayerTurning();
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
@@ -69,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerTurning()
     {
+        if (FindObjectOfType<InspectObject>() != null) return;
         float mouseX = Input.GetAxisRaw("Mouse X") * rotationSpeedX * Time.deltaTime;
         float mouseY = Input.GetAxisRaw("Mouse Y") * rotationSpeedY * Time.deltaTime;
         transform.rotation = Quaternion.Euler(0,transform.rotation.eulerAngles.y + mouseX, 0);

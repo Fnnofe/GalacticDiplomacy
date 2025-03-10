@@ -31,11 +31,11 @@ public class InspectObject : MonoBehaviour
             Vector3 mouseDelta = Input.mousePosition - previousMousePosition;
             float rotationX = mouseDelta.y * rotationSpeed * Time.deltaTime;
             float rotationY = -mouseDelta.x * rotationSpeed * Time.deltaTime;
-            
+
             Quaternion rotation = Quaternion.Euler(rotationX, rotationY, 0);
             transform.rotation = rotation * transform.rotation;
-            
-            previousMousePosition = Input.mousePosition;
+
+            previousMousePosition = Input.mousePosition; // Update mouse position every frame
         }
 
         if (Input.GetMouseButtonDown(1))
