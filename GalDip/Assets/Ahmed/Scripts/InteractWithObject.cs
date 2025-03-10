@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractWithObject : MonoBehaviour
+public class InteractWithObject : MonoBehaviour  
 {
     private RaycastHit ray;
-    public GameObject go;
+    [HideInInspector] public GameObject go;
  
     void Update()
     {

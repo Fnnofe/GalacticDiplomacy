@@ -11,7 +11,7 @@ public class Cup : MonoBehaviour, IInteractable
         Debug.Log("Cup Interacted");
         if (!GetComponent<InspectObject>())
         {
-            InspectObject ins = transform.gameObject.AddComponent<InspectObject>();
+            InspectObject ins = transform.parent.gameObject.AddComponent<InspectObject>();
             ins.ObjectCloseUp();
         }
     }
