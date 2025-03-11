@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             MovePlayer();
             PlayerTurning();
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+           // Cursor.visible = false;
         }
         else
         {

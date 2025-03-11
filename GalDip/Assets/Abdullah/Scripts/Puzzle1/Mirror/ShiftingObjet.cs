@@ -3,52 +3,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 public class ShiftingObjet : MonoBehaviour
 {
     //Objects to switch from.
-    
+
     //each object need to define thier layer later
-    public GameObject[] ObjectsGroup;
-    public int portalRotateAmount= 45;
-    int countIndex = 0;
+    [Header("Puzzle setup")]
+    [Tooltip("Set of objects to cycle through")]
+    public GameObject[] objectsGroup;
+    [Tooltip("Match the mirror to what mask and cycle through")]
     public int[] switchingSequance;
+    public int portalRotateAmount = 45;
+
+    [Header("Setup.Always the same")]
+    public Material[] MaskMaterials;
+    public MeshRenderer Mirroglass;
+
     int currentSequnce;
+    int countIndex = 0;
 
-
-    //Spin degree/array size or matieral size.
-    //increase index or decrease.
-    //reaching zero or max loop
-
-
-    //Switch Mirror Matterial half way.
-
-    //Enter the mirror.  
-    //switch objects.
-    //
-
+    public void Start()
+    {
+    }
     public void ChangeObject()
     {
 
         gameObject.transform.Rotate(0f, portalRotateAmount, 0f, Space.Self);
 
 
-        if (ObjectsGroup != null)
+        if (objectsGroup != null)
         {
             countIndex += 1;
-            if (countIndex > ObjectsGroup.Length-1)
+            if (countIndex > objectsGroup.Length-1)
             {
                 countIndex = 0;
 
             }
             else if(countIndex < 0)
             {
-                countIndex = ObjectsGroup.Length;
+                countIndex = objectsGroup.Length;
             }
             Debug.Log("countIndex: " + countIndex);
-
-
-
 
         }
 
@@ -68,15 +65,11 @@ public class ShiftingObjet : MonoBehaviour
             }
 
             //switching material for the mirror.
-
+            Mirroglass.material = MaskMaterials[switchingSequance[currentSequnce]];
         }
 
     }
-
-
     // Play Effect/animation
-
-
 
 
     public void OnTriggerEnter(Collider other)
@@ -84,14 +77,14 @@ public class ShiftingObjet : MonoBehaviour
         //check if the playered crossed
         if (other.tag == "Player")
         {
-            if (ObjectsGroup != null)
+            if (objectsGroup != null)
             {
                 //Process each group 
-                foreach (GameObject group in ObjectsGroup)
+                foreach (GameObject group in objectsGroup)
                 {
                     //hide objects by changing the layer.
                     //disable Collider.
-                    if (group != ObjectsGroup[countIndex])
+                    if (group != objectsGroup[countIndex])
                     {
                       //  group.SetActive(false);
                       Transform[] objects = group.GetComponentsInChildren<Transform>();
@@ -115,16 +108,10 @@ public class ShiftingObjet : MonoBehaviour
                             obj.gameObject.GetComponentInChildren<Collider>().enabled = true;
 
                         }
-
                     }
-
                 }
-
-
             }
         }
-
-
     }
 
 }
