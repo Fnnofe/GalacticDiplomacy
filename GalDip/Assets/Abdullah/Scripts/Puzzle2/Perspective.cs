@@ -27,7 +27,7 @@ public class Perspective : MonoBehaviour
                 myRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward * 20);
                 RaycastHit hit;
                 Physics.Raycast(myRay, out hit, 60f, myLayerMask, QueryTriggerInteraction.Collide);
-                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward*20, Color.red, 60f);
+                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward*20, Color.red, 1f);
                 if (hit.collider != null)
                 {
                     Debug.DrawLine(Camera.main.transform.position, hit.collider.transform.position,Color.green);
