@@ -40,10 +40,15 @@ public class InspectObject : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            transform.position = originalPosition;
-            transform.rotation = originalRotation;
-            Destroy(this);
+            DestroyInspector();
         }
+    }
+
+    public void DestroyInspector()
+    {
+        transform.position = originalPosition;
+        transform.rotation = originalRotation;
+        Destroy(this);
     }
     public void ObjectCloseUp()
     {

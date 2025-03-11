@@ -6,12 +6,14 @@ using UnityEngine.EventSystems;
 
 public class Cup : MonoBehaviour, IInteractable
 {
+    [SerializeField] string cupText = "Its a Cup";
+
     public void Interact()
     {
-        Debug.Log("Cup Interacted");
         if (!GetComponent<InspectObject>())
         {
-            InspectObject ins = transform.parent.gameObject.AddComponent<InspectObject>();
+            InteractbleDialouge.Instance.ShowText(cupText);
+            InspectObject ins = transform.gameObject.AddComponent<InspectObject>();
             ins.ObjectCloseUp();
         }
     }
