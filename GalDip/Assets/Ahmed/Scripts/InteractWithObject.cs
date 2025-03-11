@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,10 @@ public class InteractWithObject : MonoBehaviour
 {
     private RaycastHit ray;
     [HideInInspector] public GameObject go;
- 
+    
+
+   
+
     void Update()
     {
         var inspectedobject = GetFacingObject();
