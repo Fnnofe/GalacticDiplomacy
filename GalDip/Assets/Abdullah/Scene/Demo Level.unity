@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.1815559, g: 0.22720017, b: 0.30740738, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9715,31 +9715,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.495506
+      value: -4.161831
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0424273
+      value: 0.33526063
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7138252
+      value: 2.6600971
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69491994
+      value: 0.023488106
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.02834406
+      value: -0.0005545691
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7179953
+      value: 0.99148434
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.027670752
+      value: -0.12808886
       objectReference: {fileID: 0}
     - target: {fileID: 7651247260683178679, guid: e4f8a924c710e38448c825feec0a46b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

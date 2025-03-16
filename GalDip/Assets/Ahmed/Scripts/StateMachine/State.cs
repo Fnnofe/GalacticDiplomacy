@@ -10,7 +10,19 @@ public abstract class State
     {
         this.stateMachine = stateMachine;
     }
-    public virtual void Enter() { }
-    public virtual void Update() { }
-    public virtual void Exit() { }
+
+    public virtual IEnumerator Enter()
+    {
+        yield break;
+    }
+
+    public virtual IEnumerator Update()
+    {
+        yield break;
+    }
+
+    public virtual IEnumerator Exit()
+    {
+        yield break;
+    }
 }

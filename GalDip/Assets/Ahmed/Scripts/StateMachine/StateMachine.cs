@@ -1,23 +1,41 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class StateMachine : MonoBehaviour
 {
-    public State CurrentState{ get; private set; }
+    protected State CurrentState;
+    
+    public NavMeshAgent agent;
+    public List<Transform> waypoints; // Assign in Unity Editor
 
     public void ChangeState(State newState)
     {
         if (CurrentState != null)
         {
-            CurrentState.Exit();
-            CurrentState = newState;
-            CurrentState.Enter();
+            StartCoroutine(CurrentState.Exit());
+        }
+
+        CurrentState = newState;
+    
+        if (CurrentState != null)
+        {
+            StartCoroutine(CurrentState.Enter());
         }
     }
 
-    public void Update()
+    private void Start()
     {
-        CurrentState?.Update();
+        ChangeState(new Patrol(this));
+    }
+
+    private void Update()
+    {
+        if (CurrentState != null)
+        {
+            StartCoroutine(CurrentState.Update());
+        }
     }
 }
