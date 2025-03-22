@@ -9,7 +9,7 @@ public class StateMachine : MonoBehaviour
     protected State CurrentState;
     
     public NavMeshAgent agent;
-    public List<Transform> waypoints; // Assign in Unity Editor
+    public List<Transform> waypoints;
 
     public void ChangeState(State newState)
     {
@@ -25,12 +25,10 @@ public class StateMachine : MonoBehaviour
             StartCoroutine(CurrentState.Enter());
         }
     }
-
     private void Start()
     {
         ChangeState(new Patrol(this));
     }
-
     private void Update()
     {
         if (CurrentState != null)
