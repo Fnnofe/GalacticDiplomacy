@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!49 &4900000
+TextAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mbs-pack-descriptor
+  m_Script: "{\n    \"guid\": \"7156b3e39c7d447797f0c109bf76970e\",\n    \"_name\":
+    \"Blender House\",\n    \"_wallGroups\": [\n        {\n            \"guid\":
+    \"2f4aabc01d6b4805a93dafba3d5b98f9\",\n            \"name\": \"Walls\",\n           
+    \"_modules\": [\n                {\n                    \"guid\": \"30a3f908c767443babd2a5c861079cfc\",\n                   
+    \"name\": \"Wall\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 919132149155446097,\n                           
+    \"guid\": \"fe18ee1e633b6f34ea9bfceab78e4db5\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"16dd46d9577748ac9c25e7a00a40408a\",\n                   
+    \"name\": \"Door\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 919132149155446097,\n                           
+    \"guid\": \"a68d0c7d776e32246874f17d59771ac7\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"1d7545b142ea42aba85021f00c178db0\",\n                   
+    \"name\": \"Small Window\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 919132149155446097,\n                           
+    \"guid\": \"a8ea0c4de110e4840b59675dfbc55a4d\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"038b2e5bbf5145dea3232ec8585e882e\",\n                   
+    \"name\": \"Large Window\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 919132149155446097,\n                           
+    \"guid\": \"d8adac3eb583c1342bed7c6e383208f7\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        }\n    ],\n    \"_floorGroups\": [\n        {\n           
+    \"guid\": \"d8a5227769d04b05b290df185e036d89\",\n            \"name\": \"Floor\",\n           
+    \"_modules\": [\n                {\n                    \"guid\": \"8f65df0d1f244dc296dba277251eaba8\",\n                   
+    \"name\": \"Ground(3x3)\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 919132149155446097,\n                           
+    \"guid\": \"4faea911b908b774fb7a3c289e2e63a5\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"f03b43707280486fb0a5288efa3ceddf\",\n           
+    \"name\": \"Ceilling\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"99e87096a4e242dfbb1a69136cc9b35d\",\n                    \"name\":
+    \"New Floor Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 919132149155446097,\n                           
+    \"guid\": \"e2a2514a91cc99043931c44b99be2d1b\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        }\n    ],\n    \"_decoratorGroups\": [],\n    \"_decoratorCategories\":
+    [\n        {\n            \"guid\": \"421a6bcf7b694ddaa91f4cea4087ada2\",\n           
+    \"_name\": \"All\"\n        }\n    ]\n}"
