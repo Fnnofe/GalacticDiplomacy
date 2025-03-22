@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Patrol : State
 {
@@ -26,12 +25,15 @@ public class Patrol : State
         
         Transform waypoint = stateMachine.waypoints[currentWaypointIndex];
         stateMachine.agent.SetDestination(waypoint.position);
-        //Debug.Log("Patrol Update");
-
+       
         if (Vector3.Distance( stateMachine.agent.transform.position, waypoint.position) < 3f)
         {
-            Debug.Log("Destination Reached");
             currentWaypointIndex = currentWaypointIndex + 1;
+            
+            if (currentWaypointIndex > stateMachine.waypoints.Count - 1)
+            {
+                currentWaypointIndex = 0;
+            }
         }
         yield return null;
     }
