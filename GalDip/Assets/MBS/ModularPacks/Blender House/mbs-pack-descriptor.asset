@@ -173,6 +173,116 @@ TextAsset:
     \"guid\": \"eab4fdf3f4062c7448629cf6df88ac65\",\n                           
     \"type\": 3\n                        }\n                    ]\n               
     }\n            ],\n            \"_assetCategoryGuid\": \"421a6bcf7b694ddaa91f4cea4087ada2\"\n       
+    },\n        {\n            \"guid\": \"e46a84e732e647869a1b1d8bdef426d6\",\n           
+    \"name\": \"Vases\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"da986a69b5ca4c73ab05bc213d895633\",\n                    \"name\":
+    \"Vase1\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 6433942588003950079,\n                            \"guid\": \"4b3354f55f7b08c47b84ef17552a7271\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"486627b31a554e90ac948f710015daf1\",\n                   
+    \"name\": \"Vase2\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 9103549155068187576,\n                           
+    \"guid\": \"3cab3c69d4be88c4491688580fe0108a\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"d2ef8877251a45aebe5e79fc2fe0e200\",\n                   
+    \"name\": \"Vase3\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 502944197401669318,\n                           
+    \"guid\": \"1a26735cc6b1c7b4aa771b4b39bd4f42\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"d0ae7f0702194d9f909f842e97f7afa0\",\n                   
+    \"name\": \"Vase4\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 8582375621135514030,\n                           
+    \"guid\": \"935dff09f7b6e5b4088362e00dd3fa64\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"f13c3c764fd34dcea33e8300f800dd01\",\n                   
+    \"name\": \"Vase5\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 3239384423809925241,\n                           
+    \"guid\": \"84488b67b281f54449c1ac50a609b99c\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"421a6bcf7b694ddaa91f4cea4087ada2\"\n       
+    },\n        {\n            \"guid\": \"17f9476e4c734865b0fd764781cd67fd\",\n           
+    \"name\": \"Wall Lights\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"35188036875f4ff7b0788a46715e73f6\",\n                    \"name\":
+    \"Light01\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 3088563534363339558,\n                            \"guid\": \"e7f07112ed56c3044a2a40c742f27bf1\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"ae5a75bcaba54569907dc6723a080ac3\",\n                   
+    \"name\": \"Light02\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 7265417641215956298,\n                           
+    \"guid\": \"d74b566633fd5a140969d1c35c6d60d4\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"ef3c115f6d0949e7aa8e562abc17d51d\",\n                   
+    \"name\": \"Light03\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 3789809529929642343,\n                           
+    \"guid\": \"dd6da5431f9dffe41844a0818a6c147d\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"421a6bcf7b694ddaa91f4cea4087ada2\"\n       
+    },\n        {\n            \"guid\": \"de5d8c61b9ab40f19be3028c75e46dd3\",\n           
+    \"name\": \"Lights\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"24a4c4a24a394735bbe3a9cb2013e4c7\",\n                    \"name\":
+    \"Light02\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 8731114506449589159,\n                            \"guid\": \"faf0b0ca5dc69f243be6bf9a278c655d\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"159b56bc038d4e5ca2e6d59320fbb207\",\n                   
+    \"name\": \"Light03\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 570223867841209755,\n                           
+    \"guid\": \"3bcf459f5dbb2d24a9e04ae904b61100\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"b02e175ebda14f319f0d8cc5e6411382\",\n                   
+    \"name\": \"Light01\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 8096030779775459700,\n                           
+    \"guid\": \"6a02812316174f94db91864a1af27b4a\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"421a6bcf7b694ddaa91f4cea4087ada2\"\n       
+    },\n        {\n            \"guid\": \"56d94d9b64884f799b05c92cba341634\",\n           
+    \"name\": \"Chairs\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"d27c1d04bcd84edfa518d38e4f602b8d\",\n                    \"name\":
+    \"Chair01\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 100000,\n                            \"guid\": \"d20f3b1f8fd21804cb65f71309e9bf95\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"84d23113f1f6404188d6584aef267492\",\n                   
+    \"name\": \"Chair02\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 100000,\n                           
+    \"guid\": \"22ff2c5264001b243b22f24c9424a730\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"c066f9f226674961a1aa52ce466b261c\",\n                   
+    \"name\": \"Chair03\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 100000,\n                           
+    \"guid\": \"93954f31895250443829c4fe8e8f5961\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"6e9763cbbbf84461b1958ea99551fae0\",\n                   
+    \"name\": \"Chair04\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 100000,\n                           
+    \"guid\": \"52c5e5256a58df2448d0ef4c2038d4c4\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"7d3b0b86bfad4e22b858dec4bfe62234\",\n                   
+    \"name\": \"Chair05\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 100000,\n                           
+    \"guid\": \"535be56ea59d04247b0162c9b514d302\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"421a6bcf7b694ddaa91f4cea4087ada2\"\n       
+    },\n        {\n            \"guid\": \"1c3d2c3ef20f4360bdab0b2c69bf8254\",\n           
+    \"name\": \"Tables\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"a2569ca4407842d3a96efd6981318dc2\",\n                    \"name\":
+    \"Table01\",\n                    \"prefabs\": [\n                        {\n                           
+    \"fileID\": 100000,\n                            \"guid\": \"84b57e7a448f7b944a041fc81a9af2e8\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"5730bbcbaae44bdeb2ddbc716eb5114e\",\n                   
+    \"name\": \"Table02\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 100000,\n                           
+    \"guid\": \"23bb5aee7ad881b40a8a83e64b74df4e\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"890edf6ea9d0438eac15f0469a3e2d7e\",\n                   
+    \"name\": \"Table03\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 100000,\n                           
+    \"guid\": \"471d836b3f009df439f3a4a7f5f72c0d\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"4424dafdf4ff492396cbb0eaee6aeb06\",\n                   
+    \"name\": \"Table04\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 100000,\n                           
+    \"guid\": \"de56919f78259af428f6dcc83528f34f\",\n                           
+    \"type\": 3\n                        }\n                    ]\n               
+    }\n            ],\n            \"_assetCategoryGuid\": \"421a6bcf7b694ddaa91f4cea4087ada2\"\n       
     }\n    ],\n    \"_decoratorCategories\": [\n        {\n            \"guid\":
     \"421a6bcf7b694ddaa91f4cea4087ada2\",\n            \"_name\": \"All\"\n       
     }\n    ]\n}"

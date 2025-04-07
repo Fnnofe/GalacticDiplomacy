@@ -16,6 +16,8 @@ public class ShiftingObjet : MonoBehaviour
     [Tooltip("Match the mirror to what mask and cycle through")]
     public int[] switchingSequance;
     public int portalRotateAmount = 45;
+    public int numberOfCycles=1;
+    int cycle=1;
 
     [Header("Setup.Always the same")]
     public Material[] MaskMaterials;
@@ -23,6 +25,10 @@ public class ShiftingObjet : MonoBehaviour
 
     int currentSequnce;
     int countIndex = 0;
+    
+
+
+
 
     public void Start()
     {
@@ -30,9 +36,11 @@ public class ShiftingObjet : MonoBehaviour
     public void ChangeObject()
     {
 
-        gameObject.transform.Rotate(0f, portalRotateAmount, 0f, Space.Self);
+        //reset the rotation cycle
+        cycle++;
+        if (cycle > numberOfCycles) cycle = 1;
 
-
+        //Objects appears after entering the portal
         if (objectsGroup != null)
         {
             countIndex += 1;
@@ -70,7 +78,14 @@ public class ShiftingObjet : MonoBehaviour
 
     }
     // Play Effect/animation
+    public void Update()
+    {
+        var target = Quaternion.Euler(gameObject.transform.rotation.x, portalRotateAmount * cycle, gameObject.transform.rotation.z);
+        gameObject.transform.localRotation = Quaternion.Slerp(gameObject.transform.localRotation, target, Time.deltaTime * 5 * 2);
 
+
+
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -105,13 +120,15 @@ public class ShiftingObjet : MonoBehaviour
                         foreach (Transform obj in objects)
                         {
                             obj.gameObject.layer = 0;
-                            obj.gameObject.GetComponentInChildren<Collider>().enabled = true;
+                                obj.gameObject.GetComponentInChildren<Collider>().enabled = true;
+                           
 
                         }
                     }
                 }
             }
         }
+
     }
 
 }
