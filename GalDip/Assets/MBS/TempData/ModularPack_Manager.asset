@@ -161,6 +161,106 @@ MonoBehaviour:
         prefabs:
         - {fileID: 8547879496560887433, guid: eab4fdf3f4062c7448629cf6df88ac65, type: 3}
       _assetCategoryGuid: 421a6bcf7b694ddaa91f4cea4087ada2
+    - guid: e46a84e732e647869a1b1d8bdef426d6
+      name: Vases
+      _modules:
+      - guid: da986a69b5ca4c73ab05bc213d895633
+        name: Vase1
+        prefabs:
+        - {fileID: 6433942588003950079, guid: 4b3354f55f7b08c47b84ef17552a7271, type: 3}
+      - guid: 486627b31a554e90ac948f710015daf1
+        name: Vase2
+        prefabs:
+        - {fileID: 9103549155068187576, guid: 3cab3c69d4be88c4491688580fe0108a, type: 3}
+      - guid: d2ef8877251a45aebe5e79fc2fe0e200
+        name: Vase3
+        prefabs:
+        - {fileID: 502944197401669318, guid: 1a26735cc6b1c7b4aa771b4b39bd4f42, type: 3}
+      - guid: d0ae7f0702194d9f909f842e97f7afa0
+        name: Vase4
+        prefabs:
+        - {fileID: 8582375621135514030, guid: 935dff09f7b6e5b4088362e00dd3fa64, type: 3}
+      - guid: f13c3c764fd34dcea33e8300f800dd01
+        name: Vase5
+        prefabs:
+        - {fileID: 3239384423809925241, guid: 84488b67b281f54449c1ac50a609b99c, type: 3}
+      _assetCategoryGuid: 421a6bcf7b694ddaa91f4cea4087ada2
+    - guid: 17f9476e4c734865b0fd764781cd67fd
+      name: Wall Lights
+      _modules:
+      - guid: 35188036875f4ff7b0788a46715e73f6
+        name: Light01
+        prefabs:
+        - {fileID: 3088563534363339558, guid: e7f07112ed56c3044a2a40c742f27bf1, type: 3}
+      - guid: ae5a75bcaba54569907dc6723a080ac3
+        name: Light02
+        prefabs:
+        - {fileID: 7265417641215956298, guid: d74b566633fd5a140969d1c35c6d60d4, type: 3}
+      - guid: ef3c115f6d0949e7aa8e562abc17d51d
+        name: Light03
+        prefabs:
+        - {fileID: 3789809529929642343, guid: dd6da5431f9dffe41844a0818a6c147d, type: 3}
+      _assetCategoryGuid: 421a6bcf7b694ddaa91f4cea4087ada2
+    - guid: de5d8c61b9ab40f19be3028c75e46dd3
+      name: Lights
+      _modules:
+      - guid: 24a4c4a24a394735bbe3a9cb2013e4c7
+        name: Light02
+        prefabs:
+        - {fileID: 8731114506449589159, guid: faf0b0ca5dc69f243be6bf9a278c655d, type: 3}
+      - guid: 159b56bc038d4e5ca2e6d59320fbb207
+        name: Light03
+        prefabs:
+        - {fileID: 570223867841209755, guid: 3bcf459f5dbb2d24a9e04ae904b61100, type: 3}
+      - guid: b02e175ebda14f319f0d8cc5e6411382
+        name: Light01
+        prefabs:
+        - {fileID: 8096030779775459700, guid: 6a02812316174f94db91864a1af27b4a, type: 3}
+      _assetCategoryGuid: 421a6bcf7b694ddaa91f4cea4087ada2
+    - guid: 56d94d9b64884f799b05c92cba341634
+      name: Chairs
+      _modules:
+      - guid: d27c1d04bcd84edfa518d38e4f602b8d
+        name: Chair01
+        prefabs:
+        - {fileID: 100000, guid: d20f3b1f8fd21804cb65f71309e9bf95, type: 3}
+      - guid: 84d23113f1f6404188d6584aef267492
+        name: Chair02
+        prefabs:
+        - {fileID: 100000, guid: 22ff2c5264001b243b22f24c9424a730, type: 3}
+      - guid: c066f9f226674961a1aa52ce466b261c
+        name: Chair03
+        prefabs:
+        - {fileID: 100000, guid: 93954f31895250443829c4fe8e8f5961, type: 3}
+      - guid: 6e9763cbbbf84461b1958ea99551fae0
+        name: Chair04
+        prefabs:
+        - {fileID: 100000, guid: 52c5e5256a58df2448d0ef4c2038d4c4, type: 3}
+      - guid: 7d3b0b86bfad4e22b858dec4bfe62234
+        name: Chair05
+        prefabs:
+        - {fileID: 100000, guid: 535be56ea59d04247b0162c9b514d302, type: 3}
+      _assetCategoryGuid: 421a6bcf7b694ddaa91f4cea4087ada2
+    - guid: 1c3d2c3ef20f4360bdab0b2c69bf8254
+      name: Tables
+      _modules:
+      - guid: a2569ca4407842d3a96efd6981318dc2
+        name: Table01
+        prefabs:
+        - {fileID: 100000, guid: 84b57e7a448f7b944a041fc81a9af2e8, type: 3}
+      - guid: 5730bbcbaae44bdeb2ddbc716eb5114e
+        name: Table02
+        prefabs:
+        - {fileID: 100000, guid: 23bb5aee7ad881b40a8a83e64b74df4e, type: 3}
+      - guid: 890edf6ea9d0438eac15f0469a3e2d7e
+        name: Table03
+        prefabs:
+        - {fileID: 100000, guid: 471d836b3f009df439f3a4a7f5f72c0d, type: 3}
+      - guid: 4424dafdf4ff492396cbb0eaee6aeb06
+        name: Table04
+        prefabs:
+        - {fileID: 100000, guid: de56919f78259af428f6dcc83528f34f, type: 3}
+      _assetCategoryGuid: 421a6bcf7b694ddaa91f4cea4087ada2
     _decoratorCategories:
     - guid: 421a6bcf7b694ddaa91f4cea4087ada2
       _name: All

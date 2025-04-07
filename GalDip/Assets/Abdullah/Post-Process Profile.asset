@@ -21,10 +21,10 @@ MonoBehaviour:
     m_Value: 1.07
   intensity:
     m_OverrideState: 1
-    m_Value: 9.03
+    m_Value: 5.87
   scatter:
     m_OverrideState: 1
-    m_Value: 0.126
+    m_Value: 0.222
   clamp:
     m_OverrideState: 1
     m_Value: 5000
@@ -75,13 +75,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   shadows:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.7228996, g: 0.84054196, b: 0.8962264, a: 1}
+    m_Value: {r: 0.5186454, g: 0.5592846, b: 0.5943396, a: 1}
   balance:
     m_OverrideState: 1
     m_Value: 44.9
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   color:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
