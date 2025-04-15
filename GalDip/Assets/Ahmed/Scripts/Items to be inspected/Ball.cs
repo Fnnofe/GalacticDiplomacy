@@ -13,4 +13,8 @@ public class Ball : MonoBehaviour, IInteractable
       ins.ObjectCloseUp();
     }
   }
+  public void Observe()
+  {
+        
+  }
 }

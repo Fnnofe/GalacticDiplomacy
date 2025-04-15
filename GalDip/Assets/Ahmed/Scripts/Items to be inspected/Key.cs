@@ -10,7 +10,12 @@ public class Key : MonoBehaviour, IInteractable
     {
         InteractbleDialouge.Instance.ShowText(keyText);
         PlayerInventory.Instance.AddItem("Rusted Key");
-        FindObjectOfType<InspectObject>().DestroyInspector();
+        //FindObjectOfType<InspectObject>().DestroyInspector();
         Destroy(gameObject);
+    }
+
+    public void Observe()
+    {
+        
     }
 }

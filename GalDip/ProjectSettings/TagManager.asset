@@ -6,11 +6,12 @@ TagManager:
   tags:
   - MBS:Floor
   - MBS:Wall
+  - Carpet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Perspective
