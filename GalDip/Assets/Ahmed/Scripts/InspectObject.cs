@@ -1,11 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InspectObject : MonoBehaviour
 {
-    
     private float rotationSpeed = 50f;
     private Vector3 previousMousePosition;
     private Vector3 originalPosition;
@@ -13,6 +9,7 @@ public class InspectObject : MonoBehaviour
     private Transform inspPoint;
     public bool inspecting = false;
 
+    private bool shouldRestore = false;
 
     private void Start()
     {
@@ -21,6 +18,14 @@ public class InspectObject : MonoBehaviour
 
     void Update()
     {
+        if (shouldRestore)
+        {
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
+            Destroy(this);
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             previousMousePosition = Input.mousePosition;
@@ -35,21 +40,15 @@ public class InspectObject : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(rotationX, rotationY, 0);
             transform.rotation = rotation * transform.rotation;
 
-            previousMousePosition = Input.mousePosition; // Update mouse position every frame
+            previousMousePosition = Input.mousePosition;
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            DestroyInspector();
+            shouldRestore = true;
         }
     }
 
-    public void DestroyInspector()
-    {
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
-        Destroy(this);
-    }
     public void ObjectCloseUp()
     {
         originalPosition = transform.position;

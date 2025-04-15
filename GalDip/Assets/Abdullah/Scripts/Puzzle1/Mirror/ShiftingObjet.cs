@@ -25,7 +25,6 @@ public class ShiftingObjet : MonoBehaviour
 
     int currentSequnce;
     int countIndex = 0;
-    
 
 
 
@@ -82,7 +81,7 @@ public class ShiftingObjet : MonoBehaviour
     {
         var target = Quaternion.Euler(gameObject.transform.rotation.x, portalRotateAmount * cycle, gameObject.transform.rotation.z);
         gameObject.transform.localRotation = Quaternion.Slerp(gameObject.transform.localRotation, target, Time.deltaTime * 5 * 2);
-
+        
 
 
     }

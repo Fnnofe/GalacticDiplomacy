@@ -17,4 +17,8 @@ public class Cube : MonoBehaviour, IInteractable
         mat.SetColor("_BaseColor", new Color(0.29f, 1f, 0.12f));
         Debug.Log("Cube interacted");
     }
+    public void Observe()
+    {
+        
+    }
 }

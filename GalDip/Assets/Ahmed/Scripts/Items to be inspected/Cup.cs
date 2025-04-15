@@ -17,4 +17,8 @@ public class Cup : MonoBehaviour, IInteractable
             ins.ObjectCloseUp();
         }
     }
+    public void Observe()
+    {
+        
+    }
 }

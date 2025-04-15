@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,11 +23,17 @@ public class InteractbleDialouge: MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1)) dialogueText.text = "";
+    }
+
     public void ShowText(string message)
     {
         dialogueText.text = message;
         StopAllCoroutines();
-        StartCoroutine(HideTextAfterSeconds(2f));
+       
+        //StartCoroutine(HideTextAfterSeconds(2f));
     }
 
     private IEnumerator HideTextAfterSeconds(float seconds)
