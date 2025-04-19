@@ -6,8 +6,8 @@ using UnityEngine;
 public class InteractWithObject : MonoBehaviour  
 {
     private RaycastHit ray;
-    private bool interacting;
     [HideInInspector] public GameObject go;
+    private bool interacting;
     
 
    
@@ -19,22 +19,18 @@ public class InteractWithObject : MonoBehaviour
         var interactble = inspectedobject.GetComponent<IInteractable>();
         if (interactble != null)
         {
-            if(Input.GetKeyDown(KeyCode.Mouse0) && !interacting)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !interacting)
             {
                 interactble.Interact();
                 interacting = true;
             }
-            if(!interacting) interactble.Observe();
-
-            if (Input.GetKeyDown(KeyCode.Mouse1) && interacting)
+            if(!inspectedobject.GetComponent<InspectObject>())
             {
+                interactble.Observe();
                 interacting = false;
             }
         }
-        else
-        {
-            InteractbleDialouge.Instance.ShowText("");
-        }
+        else if(!interacting) InteractbleDialouge.Instance.ShowText("");
     }
 
     public GameObject GetFacingObject()
