@@ -3,22 +3,46 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 [RequireComponent(typeof(AudioSource))]
-public class AmbientMusic : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] ambientClips;
+    
     [SerializeField] private float fadeInDuration = 2f;
     [SerializeField] private float fadeOutDelay = 40f;
     [SerializeField] private float fadeOutDuration = 2f;
-    [SerializeField] private AudioMixerGroup mixerGroup;
-
-    private AudioSource audioSource;
+   
+    
+    [Header("Mixer Groups")]
+    [SerializeField] private AudioMixer mixer;
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
+    [SerializeField] private AudioMixerGroup voiceMixerGroup;
+    [SerializeField] private AudioMixerGroup sFXMixerGroup;
+    
+    [Header("Audio Sources")]
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource voiceSource;
+    [SerializeField] private AudioSource sFXSource;
+    
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip[] ambientClips;
+    [SerializeField] private AudioClip[] whisperClips;
+    
     private Coroutine currentRoutine;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        if (mixerGroup != null)
-            audioSource.outputAudioMixerGroup = mixerGroup;
+        musicSource.outputAudioMixerGroup = musicMixerGroup;
+        voiceSource.outputAudioMixerGroup = voiceMixerGroup; 
+    }
+
+    public void PlaySoundEffect(AudioClip clip)
+    {
+        sFXSource.clip = clip;
+        sFXSource.Play();
+    }
+    public void PlayVoiceOver(AudioClip clip)
+    {
+        voiceSource.clip = clip;
+        voiceSource.Play();
     }
 
     public void PlayTrackWithFade(int index)
@@ -33,20 +57,20 @@ public class AmbientMusic : MonoBehaviour
 
     IEnumerator FadeInAndOutRoutine(AudioClip clip)
     {
-        audioSource.clip = clip;
-        audioSource.volume = 0f;
-        audioSource.Play();
+        musicSource.clip = clip;
+        musicSource.volume = 0f;
+        musicSource.Play();
 
         // Fade In
         float t = 0f;
         while (t < fadeInDuration)
         {
             t += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(0f, 1f, t / fadeInDuration);
+            musicSource.volume = Mathf.Lerp(0f, 1f, t / fadeInDuration);
             yield return null;
         }
 
-        audioSource.volume = 1f;
+        musicSource.volume = 1f;
 
         // Wait before fading out
         yield return new WaitForSeconds(fadeOutDelay);
@@ -56,11 +80,11 @@ public class AmbientMusic : MonoBehaviour
         while (t < fadeOutDuration)
         {
             t += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(1f, 0f, t / fadeOutDuration);
+            musicSource.volume = Mathf.Lerp(1f, 0f, t / fadeOutDuration);
             yield return null;
         }
 
-        audioSource.volume = 0f;
-        audioSource.Stop();
+        musicSource.volume = 0f;
+        musicSource.Stop();
     }
 }

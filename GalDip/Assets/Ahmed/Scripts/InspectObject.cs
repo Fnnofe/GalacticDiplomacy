@@ -7,9 +7,8 @@ public class InspectObject : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private Transform inspPoint;
-    public bool inspecting = false;
 
-    private bool shouldRestore = false;
+    public bool shouldRestore = false;
 
     private void Start()
     {
