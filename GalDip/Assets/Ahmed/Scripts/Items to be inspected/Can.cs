@@ -12,4 +12,8 @@ public class Can : MonoBehaviour, IInteractable
             ins.ObjectCloseUp();
         }
     }
+    public void Observe()
+    {
+        
+    }
 }

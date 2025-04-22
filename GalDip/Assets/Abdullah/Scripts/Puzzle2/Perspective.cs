@@ -11,6 +11,8 @@ public class Perspective : MonoBehaviour
     LayerMask myLayerMask= ~11;
     bool isCastingRay = false;
     float timer = 0.3f;
+    
+    [SerializeField] AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class Perspective : MonoBehaviour
                         //Solved Puzzle
                         Debug.Log("Puzzle2 Solved");
                         SolvePuzzled();
+                        Destroy(audioSource);
                     }
                     
                 }
