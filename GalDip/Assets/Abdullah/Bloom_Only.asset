@@ -18,21 +18,21 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1.25
+    m_Value: 1.07
   intensity:
     m_OverrideState: 1
-    m_Value: 2.91
+    m_Value: 5.87
   scatter:
     m_OverrideState: 1
-    m_Value: 0.527
+    m_Value: 0.222
   clamp:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 4
   tint:
     m_OverrideState: 1
     m_Value: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   highQualityFiltering:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   downscale:
     m_OverrideState: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Post-Process Profile
+  m_Name: Bloom_Only
   m_EditorClassIdentifier: 
   components:
   - {fileID: -8354367974444364172}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 0
     m_Value: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   color:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
