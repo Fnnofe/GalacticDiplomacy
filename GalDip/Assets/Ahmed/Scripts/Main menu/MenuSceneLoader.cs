@@ -9,10 +9,16 @@ public class MenuSceneLoader : MonoBehaviour
     void Start()
     {
         
-        
-            // Load the actual game scene as a background
-            SceneManager.LoadSceneAsync("Demo Level Ahmed latest", LoadSceneMode.Additive);
-        
+    }
+
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
     
 }
