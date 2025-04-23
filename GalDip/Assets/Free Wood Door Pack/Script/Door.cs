@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 namespace DoorScript
 {
@@ -21,14 +22,18 @@ namespace DoorScript
 		float DoorCloseAngle = 0.0f;
 		public AudioSource asource;
 		public AudioClip openDoor, closeDoor;
+        public GameObject openDoorUI;
+
 		// Use this for initialization
 		void Start()
 		{
 			asource = GetComponent<AudioSource>();
-		}
+            openDoorUI.SetActive(false);
 
-		// Update is called once per frame
-		void Update()
+        }
+
+        // Update is called once per frame
+        void Update()
 		{
 			if(open == false)
 			{
@@ -43,7 +48,7 @@ namespace DoorScript
             }
             if (canOpen)
 			{
-				if (Input.GetKeyDown(KeyCode.E))
+				if (Input.GetKeyDown(KeyCode.Mouse0))
 				{
 					if (open && stayOpen==false)
 					{
@@ -85,8 +90,9 @@ namespace DoorScript
 			if (other.tag == "Player")
 			{
 				canOpen = true;
-            }
+                openDoorUI.SetActive(true);
 
+            }
 
         }
 
@@ -95,6 +101,8 @@ namespace DoorScript
             if (other.tag == "Player")
             {
                 canOpen = false;
+                openDoorUI.SetActive(false);
+
             }
 
 
