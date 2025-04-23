@@ -15,6 +15,8 @@ public class ButtonEvent : MonoBehaviour, IInteractable
 
     public void Observe()
     {
+        InteractbleDialouge.Instance.ShowText("Activate");
+
         
     }
 }

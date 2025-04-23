@@ -105,7 +105,9 @@ public class PlayerMovement : MonoBehaviour
     {
         int layerMask = ~LayerMask.GetMask("Player");
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f, layerMask))
+        Vector3 offsetPos = transform.position;
+        offsetPos.y = offsetPos.y + 1;
+        if (Physics.Raycast(offsetPos, Vector3.down, out hit, 3f, layerMask))
         {
             string tag = hit.collider.tag;
             AudioClip[] selectedClips = null;
