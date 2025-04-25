@@ -12,7 +12,7 @@ public class LightBendEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player1");
+        player = Camera.main.gameObject;
         worldBendDriver= FindAnyObjectByType<WorldBendDriver>();
         originalPosition=transform.position;
     }
@@ -21,11 +21,17 @@ public class LightBendEffect : MonoBehaviour
 
     void Update()
     {
-        //--------Here1-----Negetive Space
-
         // Step 1: Calculate distance from player
         distanceFromPlayer = player.transform.position - transform.position;
-        Vector3 temp= Vector3.one;
+
+        if (distanceFromPlayer.magnitude > worldBendDriver.startingDistance+8 )
+        {
+            return;
+        }
+        else { 
+        //--------Here1-----Negetive Space
+
+        Vector3 temp = Vector3.one;
         temp = temp * worldBendDriver.startingDistance;
         distanceFromPlayer = distanceFromPlayer - temp;
         // Step 2: Check if we’re past the startingDistance on the Z axis
@@ -33,14 +39,14 @@ public class LightBendEffect : MonoBehaviour
         Unity_Comparison_Less_float(0, distanceFromPlayer.z, out comparisonResult);
 
         // Step 3: Calculate rise target in Y axis (e.g., squared for dramatic effect)
-        float riseAmount = Mathf.Pow(distanceFromPlayer.z* comparisonResult, 2) * worldBendDriver.bendStrength;
+        float riseAmount = Mathf.Pow(distanceFromPlayer.z * comparisonResult, 2) * worldBendDriver.bendStrength;
         float branch1False = riseAmount;
 
         Unity_Comparison_Less_float(0, distanceFromPlayer.x, out comparisonResult);
-         riseAmount = Mathf.Pow(distanceFromPlayer.x * comparisonResult, 2) * worldBendDriver.bendStrength;
+        riseAmount = Mathf.Pow(distanceFromPlayer.x * comparisonResult, 2) * worldBendDriver.bendStrength;
 
 
-         float branch2False = riseAmount;
+        float branch2False = riseAmount;
         //--------Here1-----Negetive Space
 
 
@@ -54,15 +60,15 @@ public class LightBendEffect : MonoBehaviour
         Unity_Comparison_Greater_float(distanceFromPlayer.z, 0, out comparisonResult);
 
         // Step 3: Calculate rise target in Y axis (e.g., squared for dramatic effect)
-         riseAmount = Mathf.Pow(distanceFromPlayer.z * comparisonResult, 2) * worldBendDriver.bendStrength;
+        riseAmount = Mathf.Pow(distanceFromPlayer.z * comparisonResult, 2) * worldBendDriver.bendStrength;
         float branch1True = riseAmount;
-        float branch1Predicate= comparisonResult;
+        float branch1Predicate = comparisonResult;
 
         Unity_Comparison_Greater_float(distanceFromPlayer.x, 0, out comparisonResult);
         riseAmount = Mathf.Pow(distanceFromPlayer.x * comparisonResult, 2) * worldBendDriver.bendStrength;
 
         float branch2True = riseAmount;
-        float branch2Predicate= comparisonResult;
+        float branch2Predicate = comparisonResult;
         //--------Here2-----
 
 
@@ -74,8 +80,8 @@ public class LightBendEffect : MonoBehaviour
         Unity_Branch_float(branch2Predicate, branch2True, branch2False, out newPosition2);
         newPositionFinal = newPosition + newPosition2;
         // Step 5: Apply the movement relative to original position
-        transform.position = originalPosition + new Vector3(0, newPositionFinal , 0);
-        Debug.Log("new position:  "+ newPositionFinal);
+        transform.position = originalPosition + new Vector3(0, newPositionFinal, 0);
+    }
     }
 
     //Comparison Node  Greater

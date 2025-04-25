@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class InspectObject : MonoBehaviour
 {
@@ -58,12 +59,9 @@ public class InspectObject : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) & Input.GetMouseButton(0))
         {
             Vector3 mouseDelta = Input.mousePosition - previousMousePosition;
-            float rotationX = -mouseDelta.y * rotationSpeed * Time.deltaTime;
-            float rotationY = -mouseDelta.x * rotationSpeed * Time.deltaTime;
+            float rotationY = mouseDelta.x * rotationSpeed * Time.deltaTime;
 
-            Quaternion rotation = Quaternion.Euler(rotationY, 0, 0);
-            transform.rotation = rotation * transform.rotation;
-
+            transform.Rotate(Vector3.forward, rotationY);
             previousMousePosition = Input.mousePosition;
 
         }
@@ -76,7 +74,8 @@ public class InspectObject : MonoBehaviour
             float rotationY = -mouseDelta.x * rotationSpeed * Time.deltaTime;
 
             Quaternion rotation = Quaternion.Euler(0, rotationY, rotationX);
-            transform.rotation = rotation * transform.rotation;
+            transform.Rotate(Vector3.right, rotationX);
+            transform.Rotate(Vector3.up, rotationY);
 
             previousMousePosition = Input.mousePosition;
 

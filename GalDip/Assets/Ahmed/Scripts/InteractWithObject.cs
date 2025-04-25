@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class InteractWithObject : MonoBehaviour  
 {
@@ -15,7 +16,13 @@ public class InteractWithObject : MonoBehaviour
     void Update()
     {
         var inspectedobject = GetFacingObject();
-        if(inspectedobject == null)return;
+        if (inspectedobject == null)
+        {
+            //deslecet when not on interactable 
+            InteractbleDialouge.Instance.ShowText("");
+
+            return;
+        }
         var interactble = inspectedobject.GetComponent<IInteractable>();
         if (interactble != null)
         {
@@ -31,15 +38,18 @@ public class InteractWithObject : MonoBehaviour
             }
         }
         else if(!interacting) InteractbleDialouge.Instance.ShowText("");
+
     }
 
     public GameObject GetFacingObject()
     {
-        bool objHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out ray, 3f);
+        Ray MousePos = Camera.main.ScreenPointToRay(Input.mousePosition);
+        bool objHit = Physics.Raycast(MousePos, out ray, 3f);
         if (objHit)
         {
             return ray.collider.gameObject;
         }
+
         return null;
     }
 }

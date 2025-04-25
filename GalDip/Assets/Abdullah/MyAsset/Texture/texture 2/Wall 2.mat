@@ -127,6 +127,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _Metalic_Strength: 0
     - _Metallic: 0
     - _Normal_Strength: 0.587
     - _OcclusionStrength: 1
@@ -134,6 +135,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Roughness_Default: 0
     - _Roughness_Strength: 0.542
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
