@@ -146,6 +146,7 @@ Material:
     - _DstBlend: 0
     - _Glossiness: 0.01
     - _METALNESS: 0.05
+    - _Metalic_Strength: 0
     - _Metallic: 1.35
     - _Normal_Strength: 0
     - _OPACITY: 0.516
@@ -153,6 +154,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 0
+    - _Roughness_Default: 0
     - _Roughness_Strength: 0.16
     - _SPECULAR_IOR: 2.47
     - _SPECULAR_ROUGHNESS: 0.33

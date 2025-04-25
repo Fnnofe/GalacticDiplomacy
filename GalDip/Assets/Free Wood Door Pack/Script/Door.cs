@@ -7,29 +7,31 @@ namespace DoorScript
 	[RequireComponent(typeof(AudioSource))]
 
 
-	public class Door : MonoBehaviour
+	public class Door : MonoBehaviour, IInteractable
 	{
 		public bool open;
         public bool stayOpen = false;
-
+        public bool reverseMotion;
         public GameObject door;
         public GameObject frameCollider;
         
-        bool canOpen =false;
         
         public float smooth = 1.0f;
 		float DoorOpenAngle = -90.0f;
 		float DoorCloseAngle = 0.0f;
 		public AudioSource asource;
 		public AudioClip openDoor, closeDoor;
-        public GameObject openDoorUI;
+        //public GameObject openDoorUI;
 
 		// Use this for initialization
 		void Start()
 		{
 			asource = GetComponent<AudioSource>();
-            openDoorUI.SetActive(false);
-
+            // openDoorUI.SetActive(false);
+            if (reverseMotion)
+            {
+                DoorOpenAngle = 90f;
+            }
         }
 
         // Update is called once per frame
@@ -46,30 +48,6 @@ namespace DoorScript
                 var target = Quaternion.Euler(0, DoorOpenAngle, 0);
                 door.transform.localRotation = Quaternion.Slerp(door.transform.localRotation, target, Time.deltaTime * 5 * smooth);
             }
-            if (canOpen)
-			{
-				if (Input.GetKeyDown(KeyCode.Mouse0))
-				{
-					if (open && stayOpen==false)
-					{
-							frameCollider.GetComponent<BoxCollider>().enabled = true;
-                        Debug.Log("CLOSED");
-                        OpenDoor();
-                    }
-                    else if (stayOpen == true)
-                    {
-                        frameCollider.GetComponent<BoxCollider>().enabled = false;
-                        open = true;
-                    }
-                    else
-                    {
-                        frameCollider.GetComponent<BoxCollider>().enabled = false;
-                        Debug.Log("OPEN");
-                        OpenDoor();
-                    }
-
-                }
-            }
         }
 
 		public void OpenDoor()
@@ -85,30 +63,34 @@ namespace DoorScript
 
         }
 
-        private void OnTriggerEnter(Collider other)
+
+
+        public void Interact()
         {
-			if (other.tag == "Player")
-			{
-				canOpen = true;
-                openDoorUI.SetActive(true);
 
+                if (open && stayOpen == false)
+                {
+                    frameCollider.GetComponent<BoxCollider>().enabled = true;
+                    Debug.Log("CLOSED");
+                    OpenDoor();
+                }
+                else if (stayOpen == true)
+                {
+                    frameCollider.GetComponent<BoxCollider>().enabled = false;
+                    open = true;
+                }
+                else
+                {
+                    frameCollider.GetComponent<BoxCollider>().enabled = false;
+                    Debug.Log("OPEN");
+                    OpenDoor();
             }
-
         }
 
-        private void OnTriggerExit(Collider other)
+        public void Observe()
         {
-            if (other.tag == "Player")
-            {
-                canOpen = false;
-                openDoorUI.SetActive(false);
-
-            }
-
-
+            InteractbleDialouge.Instance.ShowText("interact with Door");
         }
-
-
     }
 
 }

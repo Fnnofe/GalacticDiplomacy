@@ -25,8 +25,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
-  - _ALPHATEST_ON
+  - _RECEIVE_SHADOWS_OFF
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -37,6 +36,7 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -136,11 +136,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphClip: 0
-    - _AlphaClip: 1
+    - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 2
-    - _BlendModePreserveSpecular: 1
-    - _CastShadows: 1
+    - _BlendModePreserveSpecular: 0
+    - _CastShadows: 0
     - _ColorMask: 15
     - _Cull: 0
     - _CurveStartPoint: 7
@@ -148,17 +148,19 @@ Material:
     - _DstBlend: 1
     - _Glossiness: 0.01
     - _METALNESS: 0.05
+    - _Metalic_Strength: 0
     - _Metallic: 1.35
     - _Normal_Strength: 0
     - _OPACITY: 0.516
     - _Opacity: 0.21
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
+    - _Roughness_Default: 0
     - _Roughness_Strength: 0.16
     - _SPECULAR_IOR: 2.47
     - _SPECULAR_ROUGHNESS: 0.33
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilID: 1
