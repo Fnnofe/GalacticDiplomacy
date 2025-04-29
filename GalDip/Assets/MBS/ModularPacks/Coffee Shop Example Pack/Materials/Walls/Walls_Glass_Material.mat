@@ -31,6 +31,7 @@ Material:
   - RayTracingPrepass
   - MOTIONVECTORS
   - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -100,7 +101,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 96317877a07ca46439c7e37f7b32f4f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -306,7 +307,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.14083296, g: 0.22146842, b: 0.43396223, a: 0.043137256}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.14083299, g: 0.22146845, b: 0.43396226, a: 0.043137256}
+    - _Color: {r: 0.14083293, g: 0.22146839, b: 0.4339622, a: 0.043137256}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
