@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip[] carpetSteps;
     
     [Header("Movement")]
-    [SerializeField] private float movementSpeed = 3f;
-    [SerializeField] private float runSpeed = 5f;
+    [SerializeField] public float movementSpeed = 3f;
+    [SerializeField] public float runSpeed = 5f;
     [SerializeField] private float rotationSpeedX = 100f;
     [SerializeField] private float rotationSpeedY = 100f;
     
