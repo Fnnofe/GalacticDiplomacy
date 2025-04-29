@@ -9,24 +9,27 @@ namespace DoorScript
 
 	public class Door : MonoBehaviour, IInteractable
 	{
-		public bool open;
+        public int ArtifactNeeded;
+
+        public bool open;
         public bool stayOpen = false;
         public bool reverseMotion;
         public GameObject door;
         public GameObject frameCollider;
-        
-        
+        GameProgression arifactCollected;
+
         public float smooth = 1.0f;
 		float DoorOpenAngle = -90.0f;
 		float DoorCloseAngle = 0.0f;
 		public AudioSource asource;
-		public AudioClip openDoor, closeDoor;
+		public AudioClip openDoor, closeDoor,lockedDoor;
         //public GameObject openDoorUI;
 
 		// Use this for initialization
 		void Start()
 		{
-			asource = GetComponent<AudioSource>();
+            arifactCollected= FindAnyObjectByType<GameProgression>();
+            asource = GetComponent<AudioSource>();
             // openDoorUI.SetActive(false);
             if (reverseMotion)
             {
@@ -37,17 +40,19 @@ namespace DoorScript
         // Update is called once per frame
         void Update()
 		{
-			if(open == false)
-			{
-                var target1 = Quaternion.Euler(0, DoorCloseAngle, 0);
-                door.transform.localRotation = Quaternion.Slerp(door.transform.localRotation, target1, Time.deltaTime * 5 * smooth);
+                if (open == false)
+                {
+                    var target1 = Quaternion.Euler(0, DoorCloseAngle, 0);
+                    door.transform.localRotation = Quaternion.Slerp(door.transform.localRotation, target1, Time.deltaTime * 5 * smooth);
 
-            }
-			else
-            {
-                var target = Quaternion.Euler(0, DoorOpenAngle, 0);
-                door.transform.localRotation = Quaternion.Slerp(door.transform.localRotation, target, Time.deltaTime * 5 * smooth);
-            }
+                }
+                else
+                {
+                    var target = Quaternion.Euler(0, DoorOpenAngle, 0);
+                    door.transform.localRotation = Quaternion.Slerp(door.transform.localRotation, target, Time.deltaTime * 5 * smooth);
+                }
+
+
         }
 
 		public void OpenDoor()
@@ -67,6 +72,8 @@ namespace DoorScript
 
         public void Interact()
         {
+            if (ArtifactNeeded <= arifactCollected.collocetedArtifact)
+            {
 
                 if (open && stayOpen == false)
                 {
@@ -84,8 +91,18 @@ namespace DoorScript
                     frameCollider.GetComponent<BoxCollider>().enabled = false;
                     Debug.Log("OPEN");
                     OpenDoor();
+                }
             }
+            else
+            {
+
+                asource.clip = lockedDoor;
+                asource.Play();
+
+            }
+
         }
+
 
         public void Observe()
         {

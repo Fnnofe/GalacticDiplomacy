@@ -62,7 +62,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 64
+        m_Bits: 65536
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
@@ -143,13 +143,13 @@ MonoBehaviour:
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
   - {fileID: 7644839473631100138}
+  - {fileID: -8489055297068632030}
+  - {fileID: 563821331732028582}
   - {fileID: 7507654014733813600}
   - {fileID: 1541929136944387264}
   - {fileID: -5650401142100201238}
-  - {fileID: -8489055297068632030}
-  - {fileID: 563821331732028582}
   - {fileID: -8902440118819238350}
-  m_RendererFeatureMap: ea7caa46ffec176a6087be948c8b3068c014656c61086615eaf0a72e19be95b12278932b2fd1308aa6dcac928318d30732ce970be12d7484
+  m_RendererFeatureMap: ea7caa46ffec176a2278932b2fd1308aa6dcac928318d3076087be948c8b3068c014656c61086615eaf0a72e19be95b132ce970be12d7484
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
