@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class LargePhoto : MonoBehaviour, IInteractable
     public string displayText;
     public GameObject hideRoom;
      private Collider boxCollider;
+    [SerializeField] private AudioSource audioSource;
     public void Interact()
     {
         startEvent.Invoke();
@@ -34,5 +36,13 @@ void Update()
     public void Observe()
     {
         InteractbleDialouge.Instance.ShowText(displayText);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("MBS:Floor"))
+        {
+            audioSource.Play();
+        }
     }
 }

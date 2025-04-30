@@ -25,6 +25,7 @@ public class SoundManager : MonoBehaviour
     [Header("Audio Clips")]
     [SerializeField] private AudioClip[] ambientClips;
     [SerializeField] private AudioClip[] whisperClips;
+    [SerializeField] private AudioClip[] sfxClips;
     
     private Coroutine currentRoutine;
 
