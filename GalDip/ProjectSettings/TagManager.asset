@@ -8,6 +8,7 @@ TagManager:
   - MBS:Wall
   - Carpet
   - door
+  - Artifact
   layers:
   - Default
   - TransparentFX
